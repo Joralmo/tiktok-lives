@@ -1,0 +1,42 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background: #fafafa;
+}
+
+#todo-form {
+  margin-bottom: 1rem;
+}
+
+#todo-input {
+  padding: 0.5rem;
+  width: 200px;
+}
+
+button {
+  padding: 0.5rem;
+}
+
+#todo-list {
+  list-style: none;
+  padding: 0;
+  width: 250px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  margin-bottom: 0.3rem;
+  border-radius: 5px;
+}
+
+li.done {
+  text-decoration: line-through;
+  color: #999;
+}

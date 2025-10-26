@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reloj y temporizador</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Reloj y temporizador</h1>
+
+    <div class="clock" id="clock">00:00:00</div>
+
+    <div class="timer">
+      <input type="number" id="secondsInput" placeholder="Segundos..." min="1">
+      <button id="startBtn">Iniciar</button>
+      <button id="pauseBtn">Pausar</button>
+      <button id="resetBtn">Reiniciar</button>
+      <div id="countdown">--</div>
+    </div>
+
+    <audio id="alarmSound" src="https://assets.mixkit.co/active_storage/sfx/995/995-preview.mp3"></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f1f3f4;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.note-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  resize: none;
+  height: 60px;
+}
+
+button {
+  background: #4285f4;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.notes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.note {
+  padding: 15px;
+  border-radius: 10px;
+  position: relative;
+  animation: popIn 0.3s ease;
+}
+
+.note p {
+  text-align: left;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.note button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(0,0,0,0.2);
+  border: none;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
