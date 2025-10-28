@@ -1,0 +1,159 @@
+:root {
+  --bg: #0f1220;
+  --card: #171b2e;
+  --accent: #e63946;
+  --muted: #9aa0b4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial;
+  background: radial-gradient(1200px 600px at 10% -10%, #1e2340 0%, #0f1220 35%, #0a0d18 100%);
+  color: #eef1f7;
+  display: grid;
+  place-items: center;
+  min-height: 100dvh;
+  padding: 24px;
+}
+
+.app {
+  width: 100%;
+  max-width: 720px;
+  background: linear-gradient(180deg, #1a1f36 0%, #151a2d 100%);
+  border: 1px solid #2a3050;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+}
+
+.sub {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.row {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.row-3 {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 12px 0;
+}
+
+select,
+input[type="number"],
+input[type="text"] {
+  background: #0f1324;
+  border: 1px solid #2a3050;
+  color: #eef1f7;
+  padding: 10px 12px;
+  border-radius: 10px;
+  outline: none;
+}
+
+button {
+  appearance: none;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--accent);
+  color: white;
+  transition: transform .05s ease, opacity .2s;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button.secondary {
+  background: #2b304e;
+  color: #e8ebf4;
+}
+
+.status {
+  min-height: 48px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #10152b;
+  border: 1px solid #2a3050;
+  display: grid;
+  gap: 4px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: .8rem;
+  background: #263058;
+  color: #d7dbef;
+}
+
+.hot {
+  border-color: #7a1a1f;
+  background: #201017;
+}
+
+.warm {
+  border-color: #62421a;
+  background: #1a1410;
+}
+
+.cold {
+  border-color: #1a3f62;
+  background: #0f1620;
+}
+
+.grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  background: #10152b;
+  border: 1px solid #2a3050;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+li {
+  margin: 6px 0;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.right {
+  text-align: right;
+}

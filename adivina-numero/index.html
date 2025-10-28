@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Adivina el número</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>🎯 Adivina el número</h1>
+    <p class="sub">Elige dificultad, escribe tu intento y te diré si es <b>más alto</b> o <b>más bajo</b>. ¡Intenta entrar al ranking!</p>
+
+    <div class="row-3">
+      <label>
+        <span class="muted">Dificultad</span><br/>
+        <select id="difficulty">
+          <option value="50">Fácil (1-50)</option>
+          <option value="100" selected>Normal (1-100)</option>
+          <option value="500">Difícil (1-500)</option>
+        </select>
+      </label>
+
+      <label>
+        <span class="muted">Tu nombre (para ranking)</span><br/>
+        <input id="playerName" type="text" placeholder="JoralmoPro"/>
+      </label>
+
+      <div class="right">
+        <button id="resetBtn" class="secondary">Reiniciar</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <input id="guessInput" type="number" placeholder="Escribe un número…" min="1" step="1"/>
+      <button id="tryBtn">Probar</button>
+    </div>
+
+    <div id="status" class="status">
+      <div><span class="badge">Estado</span></div>
+      <div id="message">Estoy pensando un número… ¡intenta adivinarlo!</div>
+      <div class="muted" id="stats">Intentos: 0 • Rango: 1-100 • Tiempo: 0.0s</div>
+    </div>
+
+    <section class="grid" style="margin-top:16px;">
+      <div class="card">
+        <h3 style="margin-top:0">🏆 Ranking (Top 5)</h3>
+        <ol id="rankingList"></ol>
+        <p class="muted">Se ordena por menos intentos; en caso de empate, por menor tiempo.</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">📌 Consejos</h3>
+        <ul>
+          <li>Puedes usar la tecla <b>Enter</b> para probar.</li>
+          <li>El borde del estado cambia: <i>frío</i>, <i>tibio</i>, <i>caliente</i> según tu cercanía.</li>
+          <li>Cambiar la dificultad <i>reinicia</i> la partida.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
